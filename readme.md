@@ -17,12 +17,13 @@ PHP 7, MySql, Apache
 3. `cd {location to RestApi}/RestApi`
 4. `composer install`
 5. `vendor/bin/phpab -o src/autoload.php -b src src http tests db`
-6. `vendor/bin/phinx migrate`
-7. `vendor/bin/phinx seed:run -s UserSeeder`
-8. `vendor/bin/phinx seed:run -s ProductSeeder`
-9. `vendor/bin/phinx seed:run -s BasketSeeder`
-10. create virtual host : `api.local`
-10. Run API with following data 
+6. create database `restapi` or change env file according to your configuration
+7. `vendor/bin/phinx migrate`
+8. `vendor/bin/phinx seed:run -s UserSeeder`
+9. `vendor/bin/phinx seed:run -s ProductSeeder`
+10. `vendor/bin/phinx seed:run -s BasketSeeder`
+11. create virtual host : `api.local`
+12. Run API with following data 
 	url - `http://api.local/basket`
 	method - POST
 	data - `{"user_id":"1","product_id":"2","quantity": "3"}`
